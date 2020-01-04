@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
 
-namespace Box
+namespace DeveloperBox
 {
     public partial class MainForm : Form
     {
@@ -213,7 +213,7 @@ namespace Box
 
         private void 二维码生成解析QToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new QrWindow().ShowDialog();
         }
     }
 }

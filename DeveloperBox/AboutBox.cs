@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Box
+namespace DeveloperBox
 {
     partial class AboutBox : Form
     {

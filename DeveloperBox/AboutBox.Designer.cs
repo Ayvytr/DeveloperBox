@@ -1,4 +1,4 @@
-﻿namespace Box
+﻿namespace DeveloperBox
 {
     partial class AboutBox
     {

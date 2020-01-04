@@ -1,13 +1,15 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Box
+namespace DeveloperBox
 {
     class Command
     {
@@ -71,6 +73,27 @@ namespace Box
                     return null;
                 }
             } catch(Exception e)
+            {
+                return null;
+            }
+        }
+
+        public static Bitmap resizeImage(Image image, int newW, int newH)
+        {
+            try
+            {
+                Bitmap b = new Bitmap(newW, newH);
+                Graphics g = Graphics.FromImage(b);
+
+                // 插值算法的质量
+                g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+
+                g.DrawImage(image, new Rectangle(0, 0, newW, newH), new Rectangle(0, 0, image.Width, image.Height), GraphicsUnit.Pixel);
+                g.Dispose();
+
+                return b;
+            }
+            catch
             {
                 return null;
             }

@@ -120,10 +120,19 @@
   <data name="app_occur_error" xml:space="preserve">
     <value>程序发生异常了，是否去GitHub提Issue？</value>
   </data>
+  <data name="copied_to_clipboard" xml:space="preserve">
+    <value>已复制到剪贴板</value>
+  </data>
   <data name="json_format_error" xml:space="preserve">
     <value>Json格式化出错，可能不是合法Json串</value>
   </data>
   <data name="message" xml:space="preserve">
     <value>消息</value>
+  </data>
+  <data name="qrcode_decode_failed" xml:space="preserve">
+    <value>二维码解析失败，请重试</value>
+  </data>
+  <data name="qrcode_encode_failed" xml:space="preserve">
+    <value>二维码生成出错，请重试</value>
   </data>
 </root>

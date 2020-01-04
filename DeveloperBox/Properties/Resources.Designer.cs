@@ -70,6 +70,15 @@ namespace DeveloperBox.Properties {
         }
         
         /// <summary>
+        ///   查找类似 已复制到剪贴板 的本地化字符串。
+        /// </summary>
+        internal static string copied_to_clipboard {
+            get {
+                return ResourceManager.GetString("copied_to_clipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Json格式化出错，可能不是合法Json串 的本地化字符串。
         /// </summary>
         internal static string json_format_error {
@@ -84,6 +93,24 @@ namespace DeveloperBox.Properties {
         internal static string message {
             get {
                 return ResourceManager.GetString("message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 二维码解析失败，请重试 的本地化字符串。
+        /// </summary>
+        internal static string qrcode_decode_failed {
+            get {
+                return ResourceManager.GetString("qrcode_decode_failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 二维码生成出错，请重试 的本地化字符串。
+        /// </summary>
+        internal static string qrcode_encode_failed {
+            get {
+                return ResourceManager.GetString("qrcode_encode_failed", resourceCulture);
             }
         }
     }
