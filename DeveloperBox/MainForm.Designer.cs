@@ -82,7 +82,7 @@ namespace DeveloperBox
             // 退出QToolStripMenuItem
             // 
             this.退出QToolStripMenuItem.Name = "退出QToolStripMenuItem";
-            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.退出QToolStripMenuItem.Text = "退出(&X)";
             this.退出QToolStripMenuItem.Click += new System.EventHandler(this.退出QToolStripMenuItem_Click);
             // 
@@ -131,6 +131,7 @@ namespace DeveloperBox
             this.aboutAToolStripMenuItem.Name = "aboutAToolStripMenuItem";
             this.aboutAToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutAToolStripMenuItem.Text = "About(&A)";
+            this.aboutAToolStripMenuItem.Click += new System.EventHandler(this.aboutAToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
@@ -165,6 +166,7 @@ namespace DeveloperBox
             // 
             this.et.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.et.Font = new System.Drawing.Font("宋体", 16F);
             this.et.Location = new System.Drawing.Point(0, 28);
             this.et.Name = "et";
             this.et.Size = new System.Drawing.Size(293, 548);
@@ -175,6 +177,7 @@ namespace DeveloperBox
             // 
             this.etRight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.etRight.Font = new System.Drawing.Font("宋体", 16F);
             this.etRight.Location = new System.Drawing.Point(477, 28);
             this.etRight.Name = "etRight";
             this.etRight.Size = new System.Drawing.Size(323, 548);
@@ -188,6 +191,7 @@ namespace DeveloperBox
             this.groupBoxMiddle.Controls.Add(this.btnJsonFormat);
             this.groupBoxMiddle.Controls.Add(this.btnToEnglish);
             this.groupBoxMiddle.Controls.Add(this.btnToChinese);
+            this.groupBoxMiddle.Font = new System.Drawing.Font("宋体", 16F);
             this.groupBoxMiddle.Location = new System.Drawing.Point(299, 28);
             this.groupBoxMiddle.Name = "groupBoxMiddle";
             this.groupBoxMiddle.Size = new System.Drawing.Size(180, 548);
@@ -197,7 +201,8 @@ namespace DeveloperBox
             // 
             // btnUrlDecode
             // 
-            this.btnUrlDecode.Location = new System.Drawing.Point(6, 244);
+            this.btnUrlDecode.Font = new System.Drawing.Font("宋体", 16F);
+            this.btnUrlDecode.Location = new System.Drawing.Point(8, 255);
             this.btnUrlDecode.Name = "btnUrlDecode";
             this.btnUrlDecode.Size = new System.Drawing.Size(166, 50);
             this.btnUrlDecode.TabIndex = 4;
@@ -207,7 +212,8 @@ namespace DeveloperBox
             // 
             // btnUrlEncode
             // 
-            this.btnUrlEncode.Location = new System.Drawing.Point(6, 188);
+            this.btnUrlEncode.Font = new System.Drawing.Font("宋体", 16F);
+            this.btnUrlEncode.Location = new System.Drawing.Point(8, 199);
             this.btnUrlEncode.Name = "btnUrlEncode";
             this.btnUrlEncode.Size = new System.Drawing.Size(166, 50);
             this.btnUrlEncode.TabIndex = 3;
@@ -217,7 +223,8 @@ namespace DeveloperBox
             // 
             // btnJsonFormat
             // 
-            this.btnJsonFormat.Location = new System.Drawing.Point(6, 132);
+            this.btnJsonFormat.Font = new System.Drawing.Font("宋体", 16F);
+            this.btnJsonFormat.Location = new System.Drawing.Point(8, 143);
             this.btnJsonFormat.Name = "btnJsonFormat";
             this.btnJsonFormat.Size = new System.Drawing.Size(166, 50);
             this.btnJsonFormat.TabIndex = 2;
@@ -227,7 +234,8 @@ namespace DeveloperBox
             // 
             // btnToEnglish
             // 
-            this.btnToEnglish.Location = new System.Drawing.Point(6, 76);
+            this.btnToEnglish.Font = new System.Drawing.Font("宋体", 16F);
+            this.btnToEnglish.Location = new System.Drawing.Point(8, 87);
             this.btnToEnglish.Name = "btnToEnglish";
             this.btnToEnglish.Size = new System.Drawing.Size(166, 50);
             this.btnToEnglish.TabIndex = 1;
@@ -236,7 +244,8 @@ namespace DeveloperBox
             // 
             // btnToChinese
             // 
-            this.btnToChinese.Location = new System.Drawing.Point(6, 20);
+            this.btnToChinese.Font = new System.Drawing.Font("宋体", 16F);
+            this.btnToChinese.Location = new System.Drawing.Point(8, 31);
             this.btnToChinese.Name = "btnToChinese";
             this.btnToChinese.Size = new System.Drawing.Size(166, 50);
             this.btnToChinese.TabIndex = 0;
@@ -263,7 +272,7 @@ namespace DeveloperBox
             this.MainMenuStrip = this.menuStrip;
             this.MinimumSize = new System.Drawing.Size(800, 640);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "DeveloperBox";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.SizeChanged += new System.EventHandler(this.Window_Resize);
             this.menuStrip.ResumeLayout(false);

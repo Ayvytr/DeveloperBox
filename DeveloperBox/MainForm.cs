@@ -215,5 +215,10 @@ namespace DeveloperBox
         {
             new QrWindow().ShowDialog();
         }
+
+        private void aboutAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AboutWindow().ShowDialog();
+        }
     }
 }

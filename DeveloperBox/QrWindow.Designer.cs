@@ -46,6 +46,7 @@
             // 
             // btnEncode
             // 
+            this.btnEncode.Font = new System.Drawing.Font("宋体", 10F);
             this.btnEncode.Location = new System.Drawing.Point(318, 110);
             this.btnEncode.Name = "btnEncode";
             this.btnEncode.Size = new System.Drawing.Size(120, 50);
@@ -64,14 +65,17 @@
             // 
             // et
             // 
+            this.et.Font = new System.Drawing.Font("宋体", 10F);
             this.et.Location = new System.Drawing.Point(12, 110);
             this.et.MinimumSize = new System.Drawing.Size(200, 50);
             this.et.Name = "et";
-            this.et.Size = new System.Drawing.Size(300, 21);
+            this.et.Size = new System.Drawing.Size(300, 23);
             this.et.TabIndex = 2;
+            this.et.TextChanged += new System.EventHandler(this.et_TextChanged);
             // 
             // btnSaveQrCode
             // 
+            this.btnSaveQrCode.Font = new System.Drawing.Font("宋体", 10F);
             this.btnSaveQrCode.Location = new System.Drawing.Point(690, 110);
             this.btnSaveQrCode.Name = "btnSaveQrCode";
             this.btnSaveQrCode.Size = new System.Drawing.Size(120, 50);
@@ -82,6 +86,7 @@
             // 
             // btnCopyDecode
             // 
+            this.btnCopyDecode.Font = new System.Drawing.Font("宋体", 10F);
             this.btnCopyDecode.Location = new System.Drawing.Point(690, 360);
             this.btnCopyDecode.Name = "btnCopyDecode";
             this.btnCopyDecode.Size = new System.Drawing.Size(120, 50);
@@ -92,11 +97,13 @@
             // 
             // etDecode
             // 
+            this.etDecode.Font = new System.Drawing.Font("宋体", 10F);
             this.etDecode.Location = new System.Drawing.Point(384, 360);
             this.etDecode.MinimumSize = new System.Drawing.Size(200, 50);
             this.etDecode.Name = "etDecode";
-            this.etDecode.Size = new System.Drawing.Size(300, 21);
+            this.etDecode.Size = new System.Drawing.Size(300, 23);
             this.etDecode.TabIndex = 6;
+            this.etDecode.TextChanged += new System.EventHandler(this.etDecode_TextChanged);
             // 
             // iv
             // 
@@ -108,6 +115,7 @@
             // 
             // btnDecode
             // 
+            this.btnDecode.Font = new System.Drawing.Font("宋体", 10F);
             this.btnDecode.Location = new System.Drawing.Point(258, 360);
             this.btnDecode.Name = "btnDecode";
             this.btnDecode.Size = new System.Drawing.Size(120, 50);
@@ -119,6 +127,7 @@
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog";
+            this.openFileDialog.Filter = "Png|*.png|Jpeg|*.Jpeg|Bmp|*.bmp|Gif|*.gif|Tiff|*.tiff|所有文件|*.*";
             // 
             // saveFileDialog
             // 

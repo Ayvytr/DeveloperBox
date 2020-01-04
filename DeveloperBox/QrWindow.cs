@@ -101,12 +101,12 @@ namespace DeveloperBox
                 var bitmap = Command.resizeImage(image, ivEncode.Width, ivEncode.Height);
                 if(bitmap != null)
                 {
-                    ivEncode.Image = bitmap;
+                    iv.Image = bitmap;
                 }
 
                 var reader = new BarcodeReader();
                 var result = reader.Decode(new Bitmap(image));
-                if(result.Text != null)
+                if(result != null && result.Text != null)
                 {
                     etDecode.Text = result.Text;
                 } else
@@ -123,6 +123,16 @@ namespace DeveloperBox
                 Clipboard.SetText(etDecode.Text);
                 toolStripStatusLabel.Text = Properties.Resources.copied_to_clipboard;
             }
+        }
+
+        private void et_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void etDecode_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

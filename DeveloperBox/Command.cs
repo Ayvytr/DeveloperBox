@@ -6,6 +6,7 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,8 +18,8 @@ namespace DeveloperBox
         public const string URL_TO_EN = "http://translate.google.cn/translate_a/single?client=gtx&dt=t&dj=1&ie=UTF-8&sl=auto&tl=en&q=";
         public static HttpClient httpClient = new HttpClient();
 
-        public static string GITHUB_URL = "https://github.com/ayvytr/PythonBox";
-        public static string ISSUES_URL = "https://github.com/Ayvytr/PythonBox/issues";
+        public static string GITHUB_URL = "https://github.com/ayvytr/DeveloperBox";
+        public static string ISSUES_URL = "https://github.com/Ayvytr/DeveloperBox/issues";
         public static string MAIL_URL = "mailto:ayvytr@163.com?subject=Bug-Report&body={}";
 
         static Command()
@@ -72,7 +73,8 @@ namespace DeveloperBox
                 {
                     return null;
                 }
-            } catch(Exception e)
+            } 
+            catch
             {
                 return null;
             }
@@ -97,6 +99,7 @@ namespace DeveloperBox
             {
                 return null;
             }
+
         }
     }
 }
