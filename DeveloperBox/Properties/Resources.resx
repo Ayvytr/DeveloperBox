@@ -135,4 +135,7 @@
   <data name="qrcode_encode_failed" xml:space="preserve">
     <value>二维码生成出错，请重试</value>
   </data>
+  <data name="request_cancelled" xml:space="preserve">
+    <value>请求已取消</value>
+  </data>
 </root>

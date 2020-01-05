@@ -82,7 +82,7 @@ namespace DeveloperBox
             // 退出QToolStripMenuItem
             // 
             this.退出QToolStripMenuItem.Name = "退出QToolStripMenuItem";
-            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.退出QToolStripMenuItem.Text = "退出(&X)";
             this.退出QToolStripMenuItem.Click += new System.EventHandler(this.退出QToolStripMenuItem_Click);
             // 
@@ -115,21 +115,21 @@ namespace DeveloperBox
             // gitHubToolStripMenuItem
             // 
             this.gitHubToolStripMenuItem.Name = "gitHubToolStripMenuItem";
-            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.gitHubToolStripMenuItem.Text = "GitHub(&G)";
             this.gitHubToolStripMenuItem.Click += new System.EventHandler(this.gitHubToolStripMenuItem_Click);
             // 
             // issuesIToolStripMenuItem
             // 
             this.issuesIToolStripMenuItem.Name = "issuesIToolStripMenuItem";
-            this.issuesIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.issuesIToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.issuesIToolStripMenuItem.Text = "Issues(&I)";
             this.issuesIToolStripMenuItem.Click += new System.EventHandler(this.issuesIToolStripMenuItem_Click);
             // 
             // aboutAToolStripMenuItem
             // 
             this.aboutAToolStripMenuItem.Name = "aboutAToolStripMenuItem";
-            this.aboutAToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutAToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.aboutAToolStripMenuItem.Text = "About(&A)";
             this.aboutAToolStripMenuItem.Click += new System.EventHandler(this.aboutAToolStripMenuItem_Click);
             // 
@@ -241,6 +241,7 @@ namespace DeveloperBox
             this.btnToEnglish.TabIndex = 1;
             this.btnToEnglish.Text = "转换为英文";
             this.btnToEnglish.UseVisualStyleBackColor = true;
+            this.btnToEnglish.Click += new System.EventHandler(this.btnToEnglish_Click);
             // 
             // btnToChinese
             // 

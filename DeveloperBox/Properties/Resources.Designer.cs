@@ -113,5 +113,14 @@ namespace DeveloperBox.Properties {
                 return ResourceManager.GetString("qrcode_encode_failed", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   查找类似 请求已取消 的本地化字符串。
+        /// </summary>
+        internal static string request_cancelled {
+            get {
+                return ResourceManager.GetString("request_cancelled", resourceCulture);
+            }
+        }
     }
 }

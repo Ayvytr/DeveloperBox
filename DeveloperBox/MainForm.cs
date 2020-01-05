@@ -124,9 +124,14 @@ namespace DeveloperBox
 
         private async void translateToEnglish()
         {
+            var progress = new ProgressWindow();
+            progress.ShowDialog();
             try
             {
-                var body = await Command.httpClient.GetStringAsync(Command.URL_TO_EN + et.Text);
+                var task = Command.httpClient.GetStringAsync(Command.URL_TO_EN + et.Text);
+                progress.setClosingTask(task);
+
+                var body = await task;
                 etRight.Text = body;
             }
             catch (TaskCanceledException canceledException)
@@ -136,6 +141,10 @@ namespace DeveloperBox
             catch (Exception exception)
             {
                 showExceptionIssueDialog(exception);
+            }
+            finally
+            {
+                progress.Close();
             }
         }
 
@@ -169,25 +178,32 @@ namespace DeveloperBox
 
         private void showTaskCanceledException(TaskCanceledException canceledException)
         {
-            string msg = canceledException.GetType().ToString() + "\n可能是网络中断了";
-            MessageBox.Show(msg, Properties.Resources.message, MessageBoxButtons.OK);
+            toolStripStatusLabel1.Text = Properties.Resources.request_cancelled;
         }
 
         private async void translateToChinese()
         {
+            var progress = new ProgressWindow();
+            progress.ShowDialog();
             try
             {
-                var body = await Command.httpClient.GetStringAsync(Command.URL_TO_CN + et.Text);
+                var task = Command.httpClient.GetStringAsync(Command.URL_TO_CN + et.Text);
+                progress.setClosingTask(task);
+
+                var body = await task;
                 etRight.Text = body;
             }
             catch (TaskCanceledException canceledException)
             {
-                string msg = canceledException.GetType().ToString() + "\n可能是网络中断了";
-                MessageBox.Show(msg, Properties.Resources.message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                showTaskCanceledException(canceledException);
             }
             catch (Exception exception)
             {
                 showExceptionIssueDialog(exception);
+            } 
+            finally
+            {
+                progress.Close();
             }
         }
 
@@ -219,6 +235,11 @@ namespace DeveloperBox
         private void aboutAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new AboutWindow().ShowDialog();
+        }
+
+        private void btnToEnglish_Click(object sender, EventArgs e)
+        {
+            execCommand(Command.Type.TRANSLATE_TO_EN);
         }
     }
 }
