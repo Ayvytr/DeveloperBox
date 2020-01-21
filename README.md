@@ -23,8 +23,9 @@ Png|*.png|Jpeg|*.Jpeg|Bmp|*.bmp|Gif|*.gif|Tiff|*.tiff|所有文件|*.*
 
 2. 反序列化
 
-   ```
-   //RootObject是反序列化的类
-   RootObject rb = JsonConvert.DeserializeObject<RootObject>(jsonText);
-   ```
 
+## .net Framework 转 .net Core
+
+https://docs.microsoft.com/zh-cn/dotnet/core/porting/
+
+https://www.cnblogs.com/lonelyxmas/p/10647339.html
