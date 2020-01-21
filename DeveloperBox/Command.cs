@@ -25,6 +25,8 @@ namespace DeveloperBox
         static Command()
         {
             httpClient.Timeout = TimeSpan.FromSeconds(10);
+            httpClient.DefaultRequestHeaders.Add("charset", "utf-8");
+            httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36");
         }
 
         public enum Type
@@ -42,9 +44,10 @@ namespace DeveloperBox
             return body;
         }
 
-        public static async Task<string> translateToEnglishAsync(String str)
+        public static async Task<string> translateToEnglish(String str)
         {
-            var body = await httpClient.GetStringAsync(URL_TO_EN + str);
+            var text = System.Web.HttpUtility.UrlEncode(str);
+            var body = await httpClient.GetStringAsync(URL_TO_EN + text);
             return body;
         }
 

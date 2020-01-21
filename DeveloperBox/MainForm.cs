@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -128,11 +129,12 @@ namespace DeveloperBox
             progress.ShowDialog();
             try
             {
-                var task = Command.httpClient.GetStringAsync(Command.URL_TO_EN + et.Text);
+                var task = Command.translateToEnglish(et.Text);
                 progress.setClosingTask(task);
 
                 var body = await task;
-                etRight.Text = body;
+                var translate = JsonConvert.DeserializeObject<Translate>(body);
+                etRight.Text = translate.sentences[0].trans;
             }
             catch (TaskCanceledException canceledException)
             {
@@ -187,11 +189,12 @@ namespace DeveloperBox
             progress.ShowDialog();
             try
             {
-                var task = Command.httpClient.GetStringAsync(Command.URL_TO_CN + et.Text);
+                var task = Command.translateToChinese(et.Text);
                 progress.setClosingTask(task);
 
                 var body = await task;
-                etRight.Text = body;
+                var translate = JsonConvert.DeserializeObject<Translate>(body);
+                etRight.Text = translate.sentences[0].trans;
             }
             catch (TaskCanceledException canceledException)
             {

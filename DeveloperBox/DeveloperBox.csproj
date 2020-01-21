@@ -107,6 +107,7 @@
     <Compile Include="QrWindow.Designer.cs">
       <DependentUpon>QrWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Translate.cs" />
     <EmbeddedResource Include="AboutWindow.resx">
       <DependentUpon>AboutWindow.cs</DependentUpon>
     </EmbeddedResource>
