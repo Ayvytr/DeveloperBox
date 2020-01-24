@@ -125,12 +125,10 @@ namespace DeveloperBox
 
         private async void translateToEnglish()
         {
-            var progress = new ProgressWindow();
-            progress.ShowDialog();
+            this.Cursor = Cursors.WaitCursor;
             try
             {
                 var task = Command.translateToEnglish(et.Text);
-                progress.setClosingTask(task);
 
                 var body = await task;
                 var translate = JsonConvert.DeserializeObject<Translate>(body);
@@ -146,7 +144,7 @@ namespace DeveloperBox
             }
             finally
             {
-                progress.Close();
+                this.Cursor = Cursors.Default;
             }
         }
 
@@ -185,12 +183,10 @@ namespace DeveloperBox
 
         private async void translateToChinese()
         {
-            var progress = new ProgressWindow();
-            progress.ShowDialog();
+            this.Cursor = Cursors.WaitCursor;
             try
             {
                 var task = Command.translateToChinese(et.Text);
-                progress.setClosingTask(task);
 
                 var body = await task;
                 var translate = JsonConvert.DeserializeObject<Translate>(body);
@@ -206,7 +202,7 @@ namespace DeveloperBox
             } 
             finally
             {
-                progress.Close();
+                this.Cursor = Cursors.Default;
             }
         }
 
