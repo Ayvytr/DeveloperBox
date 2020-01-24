@@ -10,6 +10,11 @@ branches:
   only:
   - master
 
+notifications:
+  email: false
+  # email:
+    # on_failure: always # default: always
+
 install:
   - nuget restore DeveloperBox.sln 
   - nuget install Costura.Fody -Version 4.1.0 #-OutputDirectory libs
