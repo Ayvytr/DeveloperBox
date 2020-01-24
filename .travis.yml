@@ -25,4 +25,8 @@ deploy:
   file:
     - ./DeveloperBox/bin/Release/DeveloperBox.exe
   skin_cleanup: true
-
+  on:     # 发布时机           
+    tags: true       # tags 设置为 true 表示只有在有 tag 的情况下才部署
+    branches:
+      only:
+        master
