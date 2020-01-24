@@ -1,0 +1,28 @@
+language: csharp
+solution: DeveloperBox.sln
+
+jobs:
+  include: 
+    - dotnet: 4.7.2
+    mono: none 
+
+branches:
+  only:
+  - master
+
+install:
+  - nuget restore DeveloperBox.sln 
+  - nuget install Costura.Fody -Version 4.1.0 #-OutputDirectory libs
+  - nuget install Newtonsoft.Json -Version 12.0.3 #-OutputDirectory libs
+  - nuget install ZXing.Net -Version  0.16.5 #-OutputDirectory libs
+
+script:
+  - msbuild /p:Configuration=Release DeveloperBox.sln
+
+deploy:
+  provider: releases
+  api_key:
+    secure: ${GITHUB_TOKEN}
+  file:
+    - ./DeveloperBox/bin/Release/DeveloperBox.exe
+  skin_cleanup: true
