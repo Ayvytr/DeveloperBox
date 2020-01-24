@@ -5,11 +5,10 @@ jobs:
   include: 
     - dotnet: 4.7.2
     mono: none 
-
 branches:
   only:
   - master
-
+  
 install:
   - nuget restore DeveloperBox.sln 
   - nuget install Costura.Fody -Version 4.1.0 #-OutputDirectory libs
@@ -26,3 +25,4 @@ deploy:
   file:
     - ./DeveloperBox/bin/Release/DeveloperBox.exe
   skin_cleanup: true
+
