@@ -4,7 +4,6 @@ solution: DeveloperBox.sln
 jobs:
   include: 
     - dotnet: 4.7.2
-      mono: none
     - mono: latest
 branches:
   only:
